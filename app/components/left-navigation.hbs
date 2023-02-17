@@ -1,0 +1,8 @@
+<div class="left-navigation">
+  {{#each this.navigationTree as |item|}}
+    <LeftNavigation::NavigationItem @item={{item}} @activeCrumb={{this.currentNavigationCrumb}} />
+  {{/each}}
+</div>
+
+{{log 'route changed' this.currentRouteInfo}}
+{{log 'navigationCrumb changed' this.currentNavigationCrumb}}

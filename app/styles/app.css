@@ -1,0 +1,35 @@
+.application {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.application .main {
+  flex: 1 1 auto;
+  padding: 1em;
+}
+
+.left-navigation {
+  color: #fff;
+  background-color: #333;
+}
+
+.left-navigation .navigation-item {
+}
+
+.left-navigation .navigation-item .link {
+  color: #fff !important;
+  text-decoration: none !important;
+  display: block;
+  padding: 0.5em 2em;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.left-navigation .navigation-item .link.active {
+  background-color: #777;
+}
+
+.left-navigation .navigation-item .children {
+  padding-left: 2em;
+}

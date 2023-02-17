@@ -1,0 +1,13 @@
+<div class="navigation-item">
+  <LinkTo @route={{@item.route}} class="link {{if this.isActive 'active'}}">
+    {{@item.title}}
+  </LinkTo>
+
+  {{#if (and this.isActive @item.children)}}
+    <div class="children">
+      {{#each @item.children as |child|}}
+        <LeftNavigation::NavigationItem @item={{child}} @activeCrumb={{this.childCrumb}} />
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
